@@ -1,0 +1,26 @@
+{
+  "name": "react-yelp-clone",
+  "version": "1.0.0",
+  "description": "Yelp clone using React, Webpack, Babel, Chai, Enzyme, Jasmine, Karma, Mocha, PhantomJS, PostCSS, and more ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PurpleDogEnterprises/React.js-Yelp-Clone.git"
+  },
+  "author": "Sean Guthrie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fullstackreact/react-yelp-clone"
+  },
+  "homepage": "https://github.com/PurpleDogEnterprises/React.js-Yelp-Clone#readme",
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-0": "^6.22.0"
+  }
+}

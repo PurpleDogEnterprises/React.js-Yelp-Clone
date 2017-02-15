@@ -21,6 +21,8 @@ var config = getConfig({
   clearBeforeBuild: true
 })
 
+const cssModulesNames = `${isDev ? '[path][name]__[local]__' : ''}[hash:base64:5]`;
+
 config.postcss = [].concat([
   require('precss')({}),
   require('autoprefixer')({}),

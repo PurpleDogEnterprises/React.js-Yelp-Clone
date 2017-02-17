@@ -1,4 +1,6 @@
 const NODE_ENV = process.env.NODE_ENV;
+const dotenv = require('dotenv');
+
 const isDev = NODE_ENV === 'development';
 
 const webpack = require('webpack');
@@ -30,6 +32,21 @@ const findLoader = (loaders, match) => {
       l.loader && l.loader.match(match));
   return found ? found[0] : null;
 }
+
+// ENV variables
+const defines =
+  Object.keys(envVariables)
+  .reduce((memo, key) => {
+    const val = JSON.stringify(envVariables[key]);
+    memo[`__${key.toUpperCase()}__`] = val;
+    return memo;
+  }, {
+    __NODE_ENV__: JSON.stringify(NODE_ENV)
+  });
+
+config.plugins = [
+  new webpack.DefinePlugin(defines)
+].concat(config.plugins);
 
 // existing css loader
 const cssloader =
